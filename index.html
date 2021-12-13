@@ -9,12 +9,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 
   </head>
+  <style media="screen">
+
+  </style>
+  <div class="top">
+      <h1>PhraseFighter</h1>
+  </div>
+
+
   <body>
 
-    <h1>PhraseFighter</h1>
 
 
-    <div id="playerAscores"></div>
+    <div class="numPlayers">
+      <h2>How Many Players?</h2>
+      <button type="button" value="1PLAYER" id="one"></button>
+      <button type="button" name="2PLAYERS" id="two"></button>
+    </div>
+
+    <div id="playerRscores"></div>
     <div id="timer"> </div>
     <div id="round"></div>
     <div id="playerBscores"></div>
@@ -22,12 +35,13 @@
 
     <div id="phrasebox<"></div>
 
-    <div id="userinput">
-      <input type="text">
-    </div>
+
     <img src="img/kb.png" alt="" id="kb">
 
     <img src="img/kr.png" alt="" id="kr">
+
+      <input type="text" id ="typebox">
+
 
     <script type="text/javascript" src="js/app.js">
       </script>

@@ -1,19 +1,54 @@
 
 body{
-
-  background-image: url(../img/ring.jpeg);
     background-color: black;
-    background-repeat: no-repeat ;
-    background-size: cover;
 
 }
+
+.wrapper{
+  position: relative;
+}
+
+.column {
+  float: left;
+  width: 29%;
+  padding: 10px;
+  height: 500px;
+  border: 13px dashed red;
+}
+
+.scoreboard{
+  position: relative;
+  z-index: 1;
+  border: 10px red dashed;
+ height: 8em;
+ margin-bottom: 1em;
+ margin-top: 2em;
+}
+
+.ring{
+   background-image: url(../img/ring.jpeg);
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  position: fixed;
+  background-repeat: no-repeat;
+  height: 50em;
+  margin-bottom: 1em;
+  margin-right; 2em;
+  margin-top: 2em;
+  position: relative;
+ }
+
+
 
 h1{
   text-align: center;
   font-family: 'Permanent Marker', cursive;
-  font-size: 80px;
+  font-size: 75px;
   color: white;
-  margin-top: 25px;
+  position: relative;
+  z-index: 1;
 }
 
 #playerBscores{
@@ -23,14 +58,19 @@ h1{
   text-decoration: none;
   font-size: 30px;
   cursor: pointer;
-  position: absolute;
   z-index: 4;
-  margin-inline-start: 30px;
   background-color: blue;
 }
-
-.top{
-margin-bottom: 25px;
+#playerRscores{
+  background-color: #d91313a3;
+  opacity: 20px;
+  WIDTH: 200px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 4;
 }
 
 #timer{
@@ -42,9 +82,7 @@ margin-bottom: 25px;
   text-decoration: none;
   font-size: 30px;
   cursor: pointer;
-  position: absolute;
   z-index: 4;
-  margin-inline-start: 600px;
 }
 
 
@@ -57,43 +95,27 @@ margin-bottom: 25px;
   text-decoration: none;
   font-size: 30px;
   cursor: pointer;
-  position: absolute;
   z-index: 4;
-  margin-inline-start: 500px;
 }
-
-#playerRscores{
-  background-color: #d91313a3;
-  opacity: 20px;
-  WIDTH: 200px;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  font-size: 30px;
-  cursor: pointer;
-  position: absolute;
-  z-index: 4;
-  margin-inline-start: 1000px;
-
-}
-
-
-
-
 
 
 #kb {
-  padding-top: 50px;
-  height: 500px;
-  float: left;
+  z-index: 5;
+  height: 30em;
+  width: 25em;
+  position: absolute;
+  top: 400px;
 }
-
 
 #kr {
-    padding-top: 50px;
-    height: 500px;
-    float: right;
+      z-index: 5;
+      height: 30em;
+      width: 25em;
+      position: absolute;
+      left: 900px;
+  top: 400px;
 }
+
 
 
 #phrasebox{
@@ -105,33 +127,32 @@ display: none;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  margin-inline-start: 324px;
   cursor: pointer;
-  position: absolute;
+  position: static;
   z-index: 20;
   height: 400px;
   width: 620px;
   border: white;
+
 }
 
 .numPlayers{
-  background-color: #2e2e2ea3;
-  color: black;
-  opacity: 90%;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-inline-start: 500px;
-  cursor: pointer;
-  position: absolute;
-  z-index: 4;
+  background-color: #9581819e;
+color: white;
+padding: 80px 80px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+cursor: pointer;
+z-index: 10;
+position: fixed;
+margin-inline-start: 450px;
+
 }
 
 
-  #one{
+#one{
   display: block;
   height: 100px;
   width: 300px;
@@ -172,12 +193,13 @@ display: none;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
-    position: absolute;
     z-index: 20;
     height: 100px;
-    width: 620px;
+    width: 500px;
     border: 10px #991212;
-    margin-left: 330px;
-    margin-top: 400px;
+    position: relative;
+
+}
+#foot{
 
 }

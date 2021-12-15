@@ -11,3 +11,9 @@ function makeHardWords() {
 }
 
 console.log(makeHardWords(10));
+
+class KANG{
+  constructor(name, health, punchpoint,) {
+
+  }
+}

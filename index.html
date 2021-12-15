@@ -14,14 +14,31 @@
   </style>
 
     <body>
+      <div>
+    <form onsubmit="return setAction(this)"class="form">
+      <label for="bname">Player 1</label>
+      <input type="text" id="bname" name="player1" placeholder="Your name..">
+
+      <label for="rname">Player 2</label>
+      <input type="text" id="rname" name="player2" placeholder="Your name..">
+
+      <label for="diff">Dificulty</label>
+      <select id="diff" name="diff">
+        <option value="easy"> Easy </option>
+      </select>
+
+      <button onclick="getPlayers()">Submit</button>
+    </form>
+  </div>
       <div class="wrapper">
 
         <br>
 
       <div class="ring">
         <h1>PhraseFighter</h1>
+           <h2>ROUND</h2>
           <div id= "timer">timer</div>
-        <div class="numPlayers">
+        <div id="numPlayers">
           <h2>How Many Players?</h2>
           <button type="button" name="1PLAYER" id="one">1 PLAYER</button>
           <button type="button" name="2PLAYERS" id="two">2 PLAYERS</button>
@@ -35,7 +52,7 @@
             </div>
 
             <div class="column" >
-              <span id= "round"> </span>
+
               <div id="phrasebox">testing</div>
 
             </div>

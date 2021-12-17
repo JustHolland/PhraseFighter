@@ -7,12 +7,17 @@
 
 
 let round = 0
-
+let playerBscore= Math.floor(Math.random() * 10);
+let playerRscore=0;
 
 //ONE PLAYER//
 const solobtn = document.querySelector("#one")
 solobtn.addEventListener("click", soloSelected);
 const roundt = document.querySelector("#round")
+const playerBscorearea= document.querySelector("#playerBscore")
+const playerRscorearea= document.querySelector("#playerRscore")
+
+
 function soloSelected(){
   document.getElementById("numPlayers").style.display = "none";
   const intervalID = setInterval(() => {
@@ -22,6 +27,7 @@ function soloSelected(){
         clocktimer.innerHTML = timeLeft +'s remaining';
         timeLeft--;
         roundt.innerHTML = "<- - - Player 1 Turn";
+        playerRscorearea.innerHTML= `PLAYER 2 PUNCH POINTS:` + playerBscore;
 
         // decrement the timer variable
 
@@ -138,7 +144,7 @@ return phrase
 ///
 
 
-let playerBscore =0
+
 
 //this is important for add information when stuff changes
 userinputsubmitted.addEventListener('input',() =>{
@@ -185,8 +191,7 @@ function eraseText() {
 }
 
 function addPoint(){
-  if('userinputsubmitted'==='phrase')
+  if(`${userinputsubmitted.trim} ===${phrase.trim}`)
   playerBscore++;
   playerBscore.innerHTML=playerBscore;
-
 }

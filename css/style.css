@@ -62,7 +62,7 @@ h1{
     margin: 0;
 }
 
-#playerBscore{
+#playerRscore{
   WIDTH: 200px;
   color: white;
   text-align: center;
@@ -70,12 +70,12 @@ h1{
   font-size: 30px;
   cursor: pointer;
   z-index: 4;
-  background-color: blue;
+
 }
 
-#playerRscore{
+#playerBscore{
 
-    background-color: #d91313a3;
+  
     opacity: 20px;
     WIDTH: 200px;
     color: white;
@@ -263,7 +263,7 @@ z-index: 1000;
 }
 #refresh{
   float: left;
-  
+
   background-color: #9b3e3e;
   font-size: 1.5rem;
   padding: 10px;

@@ -86,12 +86,12 @@ function helpSelected(){
 }
 
 
-const restartBTN = document.querySelector("#restart")
-restartBTN.addEventListener("click", restartSelected());
+// const restartBTN = document.querySelector("#restart")
+// restartBTN.addEventListener("click", restartSelected());
 
 function refreshPage(){
     window.location.reload();
-} 
+}
 //ROUND TIMER//
 // let timeLeft = 30;
 // let clocktimer = document.getElementById('timer');
@@ -127,8 +127,10 @@ function refreshPage(){
     characterSpan.innerText= character
     phraseboxdisplayElement.appendChild(characterSpan)
 console.log(`${phrase}`);
+return phrase
   })
   userinputsubmitted.value = null
+
 }
 
 
@@ -183,7 +185,8 @@ function eraseText() {
 }
 
 function addPoint(){
-  if('userinputsubmitted'==='phraseAddedChar')
+  if('userinputsubmitted'==='phrase')
   playerBscore++;
   playerBscore.innerHTML=playerBscore;
+
 }

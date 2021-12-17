@@ -6,26 +6,76 @@
 
 
 
-
+let round = 0
 
 
 //ONE PLAYER//
 const solobtn = document.querySelector("#one")
 solobtn.addEventListener("click", soloSelected);
-
+const roundt = document.querySelector("#round")
 function soloSelected(){
   document.getElementById("numPlayers").style.display = "none";
-document.getElementById("phrasebox").innerHTML = createRandomPhrase();
-}
+  const intervalID = setInterval(() => {
+
+        const clocktimer = document.querySelector('#timer')
+        // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText
+        clocktimer.innerHTML = timeLeft +'s remaining';
+        timeLeft--;
+        roundt.innerHTML = "<- - - Player 1 Turn";
+
+        // decrement the timer variable
+
+
+        if (timeLeft < 0) {
+          clearInterval(intervalID)
+          alert("lLets fight");
+          round++;
+          roundt.innerHTML = "MATCH STARTED"
+          console.log(round);
+
+          document.getElementById("phrasebox").style.display = "none";
+          document.getElementById("userinput").style.display = "none";
+          // this.timer = 5
+        }
+
+      }, 1000)
+    }
+
 
 //TWO PLAYERS//
 const twobtn = document.querySelector("#two")
 twobtn.addEventListener("click", twoSelected);
-
+let timeLeft =30;
 function twoSelected(){
 document.getElementById("numPlayers").style.display = "none";
-createRandomPhrase();
-}
+const intervalID = setInterval(() => {
+
+
+      const clocktimer = document.querySelector('#timer')
+      // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText
+      clocktimer.innerHTML = timeLeft +'s remaining';
+      timeLeft--;
+
+      // decrement the timer variable
+      if (timeLeft < 0) {
+        clearInterval(intervalID)
+        alert("player 2 is up");
+        round++;
+        roundt.innerHTML = 'Player2 Turn->';
+
+        // this.timer = 5
+      }
+
+
+    }, 1000)
+  }
+
+
+
+
+
+
+
 
 //how to playerBscore
 const helpbtn =document.querySelector("#foot")
@@ -35,22 +85,21 @@ function helpSelected(){
   alert(" WELCOME! Type as many correct phrases in the  text box before the time runs out. You will earn points for correct phrases. After the  typing round is complete your Kangaroo will box it." );
 }
 
+
+const restartBTN = document.querySelector("#restart")
+twobtn.addEventListener("click", restartSelected);
+
+function restartSelected() {
+  console.log("restart clicked");
+}
 //ROUND TIMER//
-let timeLeft = 30;
-let clocktimer = document.getElementById('timer');
+// let timeLeft = 30;
+// let clocktimer = document.getElementById('timer');
 
 
 // start when user hits enter on the text input box
-  let timerId = setInterval(countdown, 1000);
 
-    function countdown() {
-      if (timeLeft >-1) {
-        clocktimer.innerHTML = timeLeft +'s remaining';
-        timeLeft--;
 
-      }
-
-    }
 //     const s=t scoreElement = getElementById("score");
 //     function updateScore() {
 //       score++;
@@ -70,14 +119,14 @@ let clocktimer = document.getElementById('timer');
  const userinputsubmitted=document.getElementById('userinput')
 
 //this allows the
-async function addPhrase(){
-  const phrase = await getPhrase()
+ function addPhrase(){
+  const phrase = getPhrase()
   phraseboxdisplayElement.innerText = ''
   phrase.split('').forEach(character => {
     const characterSpan = document.createElement('span')
     characterSpan.innerText= character
     phraseboxdisplayElement.appendChild(characterSpan)
-
+console.log(`${phrase}`);
   })
   userinputsubmitted.value = null
 }
@@ -95,16 +144,23 @@ const phraseAddedChar = phraseboxdisplayElement.querySelectorAll('span')
 const userInputedChar = userinputsubmitted.value.split('')
 phraseAddedChar.forEach((characterSpan, index) => {
   const character = userInputedChar[index]
-
-  if (character === characterSpan.innerText){
-    characterSpan.classList.add('green')
-
-
+  if (character == null){
+    characterSpan.classList.remove('green');
+      characterSpan.classList.remove('red');
   }
-  if(phraseAddedChar===userInputedChar){
-    playerBscore++
-        console.log(playerBscore);
-  }
+  else if (character === characterSpan.innerText){
+    characterSpan.classList.add('green');
+      characterSpan.classList.remove('red');
+
+} else{
+  characterSpan.classList.add('red');
+    characterSpan.classList.remove('green');
+}
+if('green'){
+  console.log("yes");
+  addPoint();
+}
+
 
 
 })
@@ -124,4 +180,10 @@ userinputsubmitted.addEventListener("keyup", function(event) {
 
 function eraseText() {
     document.getElementById("output").value = "";
+}
+
+function addPoint(){
+  if('userinputsubmitted'==='phraseAddedChar')
+  playerBscore++;
+  playerBscore.innerHTML=playerBscore;
 }

@@ -52,7 +52,7 @@ h1{
 
 }
 
-h2{
+#round{
   text-align: center;
   font-family: 'Permanent Marker', cursive;
   font-size: 30px;
@@ -74,16 +74,16 @@ h2{
 }
 
 #playerRscore{
-  float: right;
-  background-color: #d91313a3;
-  opacity: 20px;
-  WIDTH: 200px;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  font-size: 30px;
-  cursor: pointer;
-  z-index: 4;
+
+    background-color: #d91313a3;
+    opacity: 20px;
+    WIDTH: 200px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 4;
 }
 
 #timer{
@@ -249,7 +249,7 @@ margin-inline-start: 450px;
   padding: 10px;
   border: 0px;
   box-shadow: black 5px 8px 5px;
-  z-index: 100;
+  z-index: 1000;
 }
 
 #restart{
@@ -260,6 +260,7 @@ margin-inline-start: 450px;
   padding: 10px;
   border: 0px;
   box-shadow: black 5px 8px 5px;
+  z-index: 1000;
 }
 
 #hideform{
@@ -271,4 +272,9 @@ margin-inline-start: 450px;
 .green{
   font-weight: bold;
   color: green;
+}
+
+.red{
+  font-weight: bold;
+  color: red;
 }

@@ -139,6 +139,10 @@ h1{
     position: absolute;
     left: 1%
 }
+#kb:hover{
+  animation-direction: normal;
+}
+
 
 #kr {
       z-index: 5;
@@ -243,15 +247,18 @@ margin-inline-start: 450px;
 
 
 #foot{
-  display: inline-block;
-  background-color: #9b3e3e;
-  font-size: 1.5rem;
-  padding: 10px;
-  border: 0px;
-  box-shadow: black 5px 8px 5px;
-  z-index: 1000;
+  display: block;
+  height: 100px;
+  width: 300px;
+  background-color: #2196f3;
+  color: black;
+  opacity: 70%;
 }
-
+#foot:hover{
+  background-color: #f44336;
+  color: white;
+}
+}
 #restart{
   float:right;
   display: inline-block;

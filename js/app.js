@@ -87,11 +87,11 @@ function helpSelected(){
 
 
 const restartBTN = document.querySelector("#restart")
-twobtn.addEventListener("click", restartSelected);
+restartBTN.addEventListener("click", restartSelected());
 
-function restartSelected() {
-  console.log("restart clicked");
-}
+function refreshPage(){
+    window.location.reload();
+} 
 //ROUND TIMER//
 // let timeLeft = 30;
 // let clocktimer = document.getElementById('timer');

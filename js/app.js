@@ -166,7 +166,7 @@ phraseAddedChar.forEach((characterSpan, index) => {
 }
 if('green'){
   console.log("yes");
-  addPoint();
+
 }
 
 
@@ -190,8 +190,8 @@ function eraseText() {
     document.getElementById("output").value = "";
 }
 
-function addPoint(){
-  if(`${userinputsubmitted.trim} ===${phrase.trim}`)
-  playerBscore++;
-  playerBscore.innerHTML=playerBscore;
-}
+// function addPoint(){
+//   if(`${userinputsubmitted.trim} ===${phrase.trim}`)
+//   playerRscore++;
+//   playerRscore.innerHTML=playerBscore;
+// }

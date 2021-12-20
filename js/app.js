@@ -166,9 +166,9 @@ userinputsubmitted.addEventListener("keyup", function(event) {
     event.preventDefault();
 
   console.log(document.getElementById("userinput").value );
-  console.log(`${phrases}`);
 
-    // Trigger the button element with a clic
+
+
 
     addPhrase();
 

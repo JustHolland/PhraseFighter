@@ -1,5 +1,5 @@
 body{
-    background-color: white;
+  background-color: #c4c2c3;
 
 }
 
@@ -75,7 +75,7 @@ h1{
 
 #playerBscore{
 
-  
+
     opacity: 20px;
     WIDTH: 200px;
     color: white;
@@ -112,23 +112,6 @@ h1{
   position: fixed;
 
 }
-/* #round{
-  background-color: #d91313a3;
-  opacity: 20px;
-  WIDTH: 200px;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  font-size: 30px;
-  cursor: pointer;
-  z-index: 4;
-  margin: 8px;
-  padding: 12px;
-  border: 12px solid;
-  margin-left: auto;
-  margin-right: auto;
-  width: 8em;
-} */
 
 
 #kb {
@@ -247,7 +230,7 @@ margin-inline-start: 450px;
 
 
 #foot{
-  float: right;
+
 display: inline-block;
 background-color: #9b3e3e;
 font-size: 1.5rem;
@@ -260,16 +243,16 @@ z-index: 1000;
   background-color: #f44336;
   color: white;
 }
-}
-#refresh{
-  float: left;
 
+#refresh{
   background-color: #9b3e3e;
   font-size: 1.5rem;
   padding: 10px;
   border: 0px;
   box-shadow: black 5px 8px 5px;
   z-index: 1000;
+  display: inline;
+  margin-inline-start: 43%;
 }
 
 #hideform{

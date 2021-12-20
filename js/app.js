@@ -1,7 +1,7 @@
 
 //creates random words and returns it
 
-  const phraseArr = ['Quality time' , 'The plot thickens' , 'Cut to the chase', 'Burst your bubble' , 'Birds of a feather flock together' , 'Back to the drawing board', 'Hard pill to swallow'
+const phraseArr = ['Quality time' , 'The plot thickens' , 'Cut to the chase', 'Burst your bubble' , 'Birds of a feather flock together' , 'Back to the drawing board', 'Hard pill to swallow'
 , 'Dropping like flies' , 'Down and out' , 'Cut the mustard' , 'Down to earth', 'Cry over spilt milk' , 'You cant judge a book by its cover' , 'Swinging for the fences',];
 
 
@@ -24,7 +24,7 @@ function soloSelected(){
 
         const clocktimer = document.querySelector('#timer')
         // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText
-        clocktimer.innerHTML = timeLeft +'s remaining';
+        clocktimer.innerHTML = timeLeft + 'remaining';
         timeLeft--;
         roundt.innerHTML = "<- - - Player 1 Turn";
         playerRscorearea.innerHTML= `PLAYER 2 PUNCH POINTS:` + playerBscore;
@@ -41,7 +41,7 @@ function soloSelected(){
 
           document.getElementById("phrasebox").style.display = "none";
           document.getElementById("userinput").style.display = "none";
-          // this.timer = 5
+
         }
 
       }, 1000)
@@ -51,7 +51,7 @@ function soloSelected(){
 //TWO PLAYERS//
 const twobtn = document.querySelector("#two")
 twobtn.addEventListener("click", twoSelected);
-let timeLeft =30;
+let timeLeft =300;
 function twoSelected(){
 document.getElementById("numPlayers").style.display = "none";
 const intervalID = setInterval(() => {
@@ -79,10 +79,6 @@ const intervalID = setInterval(() => {
 
 
 
-
-
-
-
 //how to playerBscore
 const helpbtn =document.querySelector("#foot")
 helpbtn.addEventListener("click", helpSelected);
@@ -98,20 +94,6 @@ function helpSelected(){
 function refreshPage(){
     window.location.reload();
 }
-//ROUND TIMER//
-// let timeLeft = 30;
-// let clocktimer = document.getElementById('timer');
-
-
-// start when user hits enter on the text input box
-
-
-//     const s=t scoreElement = getElementById("score");
-//     function updateScore() {
-//       score++;
-//       scoreElement.innerHTML = score;
-//     }
-// //typing game/////
 
 
 //  add new phrase to the screen
@@ -168,7 +150,10 @@ if('green'){
   console.log("yes");
 
 }
-
+while(userinputsubmitted.value === phraseboxdisplayElement.value){
+playerRscore += playerRscore
+console.log(playerRscore);
+}
 
 
 })
@@ -177,21 +162,21 @@ userinputsubmitted.addEventListener("keyup", function(event) {
   // Number 13 is the "Enter" key on the keyboard
   if (event.keyCode === 13) {
     // Cancel the default action, if needed
-    event.preventDefault();
-    // Trigger the button element with a click
 
+    event.preventDefault();
+
+  console.log(document.getElementById("userinput").value );
+  console.log(`${phrases}`);
+
+    // Trigger the button element with a clic
 
     addPhrase();
-  }
+
+}
 });
 
 
-function eraseText() {
-    document.getElementById("output").value = "";
-}
 
-// function addPoint(){
-//   if(`${userinputsubmitted.trim} ===${phrase.trim}`)
-//   playerRscore++;
-//   playerRscore.innerHTML=playerBscore;
-// }
+
+
+console.log(userinput);
